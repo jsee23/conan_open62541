@@ -3,7 +3,7 @@ from conans import ConanFile, CMake, tools
 
 class Open62541Conan(ConanFile):
     name = "open62541"
-    version = "0.2"
+    version = "0.3-rc1"
     license = "MPL v2"
     url = "<Package recipe repository url here, for issues about the package>"
     description = "<Description of Open62541 here>"
@@ -14,7 +14,7 @@ class Open62541Conan(ConanFile):
 
     def source(self):
         self.run("git clone https://github.com/open62541/open62541.git")
-        self.run("cd open62541 && git checkout 0.2")
+        self.run("cd open62541 && git checkout 0.3-rc1")
 
     def build(self):
         cmake = CMake(self)
